@@ -1,1 +1,1 @@
-import { mySwiper } from '../js/banner.js';
+import { mySwiper, ms, newthing } from '../js/banner.js';

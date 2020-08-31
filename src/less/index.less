@@ -1,165 +1,10 @@
+@import './header.less';
+@import './foot.less';
+
 *{
     margin: 0;
     padding: 0;
 }
-
-#nav{
-    height:48px;
-    background: #333;
-}
-.center{
-    width: 1080px;
-    height: 48px;
-    margin: 0 auto;
-    .fr{
-        width: 516px;
-        height: 48px;
-        float: right;
-        background: #333;
-        .fl{
-            width: 80px;
-            height: 48px;
-            line-height: 48px;
-            float: left;
-            margin-left: 5px;
-            margin-right: 8px;
-            position: relative;
-            .login{
-                font-size: 14px;
-                color: #e7e7e7;
-                margin-left: 8px;
-                text-decoration: none;
-            }
-            .register{
-                font-size: 14px;
-                color: #e7e7e7;
-                margin-left: 8px;
-                text-decoration: none;
-            }
-        }
-        .ml-line{
-            float: left;
-            width: 0px;
-            height: 16px;
-            margin: 17px 3px 0px 6px;
-            border-right: 1px solid #666;
-        }
-        .m-help{
-            width: 56px;
-            height: 48px;
-            line-height: 48px;
-            float: left;
-            margin: 0px 8px 0px 11px;
-            .ml-help{
-                text-decoration: none;
-                font-size:14px;
-                color: #e7e7e7;
-            }
-        }
-        .m-download{
-            width: 95px;
-            margin-left: 5px;
-            height: 48px;
-            float: left;
-            .download{
-                float: right;
-                width: 90px;
-                height: 48px;
-                line-height:48px;
-                text-align: right;
-                margin-right: 5px;
-                text-decoration: none;
-                font-size:14px;
-                color: #e7e7e7;
-                position: relative;
-                .phone{
-                    width: 30px;
-                    height: 30px;
-                    display: inline-block;
-                    position: absolute;
-                    top: 10px;
-                    left: 2px;
-                    background:url(../images/yp-icons.png)0px -965px no-repeat;
-                }
-            }
-        }
-        .m-live{
-            width: 36px;
-            height:48px;
-            float: left;
-            margin-right: 5px;
-            line-height: 48px;
-            .live{
-                font-size: 14px;
-                color: #e7e7e7;
-                float: right;
-                text-decoration: none;
-            }
-        }
-        .m-con{
-            width: 167px;
-            height: 48px;
-            line-height: 48px;
-            float: right;
-            .noopener{
-                font-size: 14px;
-                color: #e7e7e7;
-                margin-left: 6px;
-                text-decoration: none;
-                display: inline-block;
-                position: relative;
-                .down{
-                    display: inline-block;
-                    width: 30px;
-                    height: 30px;
-                    background: #000;
-                    background: url(../images/yp-icons.png)-1px -1678px no-repeat;
-                    position: absolute;
-                    top: 8px;
-                    left: 130px;
-                }
-                .noop{
-                    overflow: hidden;
-                    width:160px;
-                    height: 0px;
-                    background: #ccc;
-                    position: absolute;
-                    top: 47px;
-                    right: -28px;
-                    box-shadow: 5px 5px 5px;
-                    transition: all .5s;
-                    list-style: none;
-                    >li:first-child{
-                        width: 160px;
-                        height: 35px;
-                        line-height: 35px;
-                        text-align: center;
-                        font-size: 14px;
-                        color: #333;
-                        background: #fff;
-                    }
-                    >li:last-child{
-                        width: 160px;
-                        height: 35px;
-                        font-size: 14px;
-                        line-height: 35px;
-                        text-align: center;
-                        color: #333;
-                        background: #fff;
-                    }
-                    >li:hover{
-                        background: #845f3f;
-                        color: #fff;
-                    }
-                }
-            }
-            .noopener:hover .noop{
-                height: 70px;
-            } 
-        }
-    }
-}
-
 #container{
     width: 1080px;
     height: 51px;
@@ -280,11 +125,16 @@
             background: #876d46;
         }
     }
-    .banner-box{
+    >.swiper-container{
         width: 859px;
         height: 358px;
-        background: gold;
         float: left;
+            >.swiper-wrapper{
+                >img{
+                    width: 100%;
+                    height: 100%;
+                }
+            }
     }
 }
 
@@ -578,6 +428,7 @@
 .h-sec-top{
     width: 1080px;
     margin: 40px auto;
+    margin-bottom: 20px;
     position: relative;
     height: 37px;
     .trap-top{
@@ -684,10 +535,78 @@
     }
 }
 
+.swiper-container{
+    width: 1080px;
+    height: 354px;
+    margin: 0 auto;
+    .swiper-slide{
+        height: 354px;
+        float: left;
+        transition: all .4s;
+        margin-right: 4px;
+        .swiper-top{
+            width: 270px;
+            height: 266px;
+            >img{
+                width: 100%;
+                height: 100%;
+            }
+        }
+        .swiper-bottom{
+            width: 270px;
+            height: 60px;
+            background: #faf6ef;
+            padding-top:13px;
+            padding-bottom: 15px;
+            text-align: center;
+            >.pro-info{
+                width: 270px;
+                height: 23px;
+                color: #333;
+                font-size: 19px;
+                line-height: 23px;
+            }
+            >.pro-price{
+                width: 270px;
+                height: 26px;
+                margin-top: 11px;
+                line-height: 26px;
+                color: #a92112;
+                >.pro-unit{
+                    font-size: 15px;
+                }
+                >.m-num{
+                    font-size: 22px;
+                }
+                >.pro-flag{
+                    font-size: 12px;
+                }
+                >.market-price{
+                    text-decoration: line-through;
+                    color: #333;
+                    margin-left: 5px;
+                    >.pro-unit{
+                        font-size: 9px;
+                    }
+                    >.m-num{
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+    .hov:hover{
+        box-shadow: 0 2px 20px rgba(0,0,0,.1);
+        transform: translate3d(0,-2px,0);
+    }
+}
+
+
 .head{
     width: 1080px;
     height: 37px;
     margin: 0 auto;
+    margin-top: 60px;
     margin-bottom: 20px;
     >.h2{
         font-size: 28px;
@@ -827,62 +746,4 @@
     .mar{
         margin-left: 5px;
     }
-}
-
-.foot-box{
-    width: 100%;
-    height: 45px;
-    margin-top:60px;
-    padding: 45px 0;
-    line-height: 23px;
-    border-top: 1px solid #e7e7e7;
-    color: #666;
-    >.cont{
-        width: 1080px;
-        height: 45px;
-        margin: 0px auto;
-        >img{
-            &:nth-child(1){
-                float: left;
-                display: block;
-                width: 123px;
-                height: 45px;
-            }
-            &:nth-child(2){
-                float: right;
-                display: block;
-                margin-top: 10px;
-                width: 100px;
-                height: 36px;
-            }
-            
-        }
-        >.text{
-            width: 683px;
-            height: 90px;
-            margin-left: 400px;
-            font-size: 12px;
-            color:#666;
-            >p{
-                >a{
-                    color:#666;
-                    padding: 0px 5px;
-                    text-decoration: none;
-                    &:hover{
-                        color: goldenrod;
-                    }
-                }
-            }
-
-        }
-    }
-    
-}
-.clear:after{
-    content: "";
-    display: block;
-    height: 0;
-    clear: both;
-    overflow: hidden;
-    visibility: hidden;
 }
