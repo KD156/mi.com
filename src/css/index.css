@@ -452,6 +452,7 @@
 .cf .home-item .innt .bottom .progress-tag-con .common-tag {
   width: 13px;
   height: 18px;
+  border-radius: 2px;
   padding: 0px 6px;
   color: #fff;
   font-size: 13px;
@@ -550,6 +551,7 @@
 .cf .home-good .innt .bottom .progress-tag-con .common-tag {
   width: 13px;
   height: 18px;
+  border-radius: 2px;
   padding: 0px 6px;
   color: #fff;
   font-size: 13px;
