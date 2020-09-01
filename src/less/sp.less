@@ -1,5 +1,7 @@
 @import './header.less';
 @import './foot.less';
+@import './introduction.less';
+@import './container.less';
 #sp-box{
     width: 100%;
     min-height: 285px;
@@ -393,7 +395,7 @@
                         width: 30px;
                         height: 30px;
                         background-position: 0 -930px;
-                        background-image: url(../images/jlt.png);
+                        background-image: url(../images/yp-icons.png);
                         outline: none;
                         cursor: pointer;
                     }
@@ -407,8 +409,20 @@
                         font-size: 12px;
                     }
                 }
-                
+                >.favor-btn:hover{
+                    background: #845f3f;
+                }
+                >.favor-btn:hover >a{
+                    background-position: 0 -1712px;
+                }
+                >.favor-btn:hover >.a1{
+                    background-position: 0 -1543px;
+                }
+                >.favor-btn:hover >p{
+                    color: #fff;
+                }
             }
         }
     }
 }
+
