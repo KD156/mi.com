@@ -459,7 +459,7 @@
   color: #333;
   line-height: 24px;
 }
-.cf .home-item .int .pro-text .pro-desc {
+.cf .home-item .int .pro-text > .pro-desc {
   height: 20px;
   margin-top: 8px;
   color: #999;
@@ -561,7 +561,7 @@
   color: #333;
   line-height: 24px;
 }
-.cf .home-good .pro-text .pro-desc {
+.cf .home-good .pro-text > .pro-desc {
   height: 20px;
   margin-top: 8px;
   color: #999;
@@ -873,28 +873,36 @@
   border: 1px solid #e7e7e7;
   margin-bottom: 5px;
   float: left;
-  cursor: pointer;
   transition: all 0.4s;
+  margin-left: 5px;
 }
-.product-list .pro-item .img-container {
+.product-list .pro-item > a {
+  display: block;
+  text-decoration: none;
+}
+.product-list .pro-item > a .img-container {
   width: 194px;
   height: 195px;
   padding: 0 35px;
   padding-bottom: 3px;
 }
-.product-list .pro-item .img-container > img {
+.product-list .pro-item > a .img-container > img {
   width: 100%;
   height: 100%;
 }
-.product-list .pro-item .pro-desc {
-  width: 264px;
+.product-list .pro-item > a > .title {
+  width: 240px;
   height: 20px;
+  text-align: center;
+  margin: 0 auto;
   color: #845f3f;
   font-size: 16px;
   line-height: 20px;
-  text-align: center;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
-.product-list .pro-item .cate {
+.product-list .pro-item > a .cate {
   width: 264px;
   height: 89px;
   margin-top: 18px;
@@ -903,12 +911,12 @@
   background: #f8f8f8;
   text-align: center;
 }
-.product-list .pro-item .cate .m-goods {
+.product-list .pro-item > a .cate .m-goods {
   width: 264px;
   height: 20px;
   padding: 2px 0px;
 }
-.product-list .pro-item .cate .m-goods .tejia {
+.product-list .pro-item > a .cate .m-goods .tejia {
   float: inline-start;
   color: #fff;
   font-size: 14px;
@@ -917,33 +925,38 @@
   padding: 0px 6px;
   background-color: #d96b6c;
 }
-.product-list .pro-item:hover {
-  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
-  transform: translate3d(0, -2px, 0);
-}
-.product-list .yunmi {
-  width: 264px;
+.product-list .pro-item > a .cate .yunmi {
+  width: 200px;
   height: 22px;
   color: #333;
+  text-align: center;
+  margin: 0 auto;
   margin-top: 10px;
   font-size: 18px;
   line-height: 22px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
-.product-list .qian {
+.product-list .pro-item > a .cate .qian {
   width: 264px;
   height: 22px;
   margin-top: 10px;
   color: #a92112;
 }
-.product-list .qian .pro-unit {
+.product-list .pro-item > a .cate .qian .pro-unit {
   font-size: 13px;
 }
-.product-list .qian .m-num {
+.product-list .pro-item > a .cate .qian .m-num {
   font-size: 20px;
 }
-.product-list .qian .fg {
+.product-list .pro-item > a .cate .qian .fg {
   font-size: 12px;
 }
-.product-list .mar {
-  margin-left: 5px;
+.product-list .pro-item:nth-child(4n+1) {
+  margin-left: 0px ;
+}
+.product-list .pro-item:hover {
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+  transform: translate3d(0, -2px, 0);
 }

@@ -1,7 +1,11 @@
 <?php
     include('./conn.php');
 
-    $sql = "select * from product";
+    $idList = $_REQUEST['idList'];
+
+
+    $sql = "select * from product where id in ($idList)";
+
 
     $res = $mysqli->query($sql);
 
@@ -11,10 +15,9 @@
 
     while($row = $res->fetch_assoc()){
         array_push($arr,$row);
-    }
+    };
 
     $json = json_encode($arr);
 
     echo $json;
-
 ?>
